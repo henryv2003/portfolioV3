@@ -16,15 +16,15 @@ const Hero = () => {
         min-h-screen overflow-hidden c-space">
             <HeroText/>
             <ParallaxBackground/>
-            <figure className="absolute inset-0"
+            <figure className="absolute inset-0 pointer-events-none"
                     style={{width: "100vw", height: "100vh"}}>
-                      <Canvas camera={{position:[0,1,3]}}>
+                      <Canvas camera={{position:[0,1,3]}} style={{pointerEvents: "auto"}}>
                         <Suspense fallback={<Loader />}>
                         <Float>
                             <Astronaut scale={isMobile && 0.23} 
                                     position={isMobile && [0, -1.5, 0]} />
                         </Float>
-                        <OrbitControls/>
+                        <OrbitControls enableZoom={false} enablePan={false}/>
                         <Rig/>
                         </Suspense>
                       </Canvas>
