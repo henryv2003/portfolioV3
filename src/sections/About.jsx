@@ -3,6 +3,9 @@ import Card from '../components/Card'
 import { Globe } from '../components/Globe'
 import { Meteors } from '../components/Meteors'
 import Stars from '../components/Stars'
+import CopyEmailButton from '../components/CopyEmailButton'
+import { Frameworks } from '../components/Frameworks'
+
 
 
 const About = () => {
@@ -84,9 +87,29 @@ const About = () => {
           </div>
         </div>
         {/* grid 4 */}
-        <div className='grid-special-color grid-4'></div>
+        <div className='grid-special-color grid-4'>
+            <div className='flex flex-col items-center justify-center gap-4 size-full'>
+                <p className='text-center headtext'>
+                  Do you want to start a project?
+                </p>
+                <CopyEmailButton/>
+            </div>
+        </div>
         {/* grid 5 */}
-        <div className='grid-default-color grid-5'></div>
+        <div className='grid-default-color grid-5'>
+          <div className='z-10 w-[50%]'>
+              <p className='headtext'>
+                Teck Stack
+              </p>
+              <p className='subtext'>
+                I specialize in a variety of languages, frameworks that allows me to build robust
+                and scalable applications
+              </p>
+          </div>
+            <div className='absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125'>
+              <Frameworks/>
+          </div>
+        </div>
       </div>
     </section>
   )
